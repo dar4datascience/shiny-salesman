@@ -4,6 +4,7 @@ library(geosphere)
 source("helpers.R")
 
 shinyServer(function(input, output, session) {
+  #bs_themer()
   vals = reactiveValues()
   
   map_name = reactive({
