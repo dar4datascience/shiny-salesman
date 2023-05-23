@@ -10,21 +10,9 @@
 
 https://toddwschneider.com/posts/traveling-salesman-with-simulated-annealing-r-and-shiny/
 
-font_scale = 1.1, bootswatch = "vapor"
 
- bg = "rgb(26, 180, 64)", font_scale = 1.2, 
-    bootswatch = "sketchy", fg = "#000")
-
-
-
-
-
-############################33
-
-
-
-
-A Shiny app to solve the traveling salesman problem with simulated annealing. Check out the full post here: https://toddwschneider.com/posts/traveling-salesman-with-simulated-annealing-r-and-shiny/
+###########################
+A ShiNy app to solve the traveling salesman problem with simulated annealing. Check out the full post here: https://toddwschneider.com/posts/traveling-salesman-with-simulated-annealing-r-and-shiny/
 
 To run on your local machine, paste the following into your R console:
 
