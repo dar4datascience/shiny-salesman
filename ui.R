@@ -100,12 +100,16 @@ shinyUI(
         tags$li(class = "nav-item nav-title",
                 "Shiny salesman"),
         tags$li(class = "nav-item",
-                tags$a("Random Travel", href = "#")),
+                tags$a("Random Travel",
+                       icon("plane"),
+                       href = "#")),
         tags$li(class = "nav-item",
-                tags$a("Select your cities!", href = "#")),
+                tags$a("Select your cities!",
+                       icon("map-pin"),
+                       href = "#")),
         
         div(class = "navbar-github-icon",
-            tags$a(href = "https://github.com/your-github-repo",
+            tags$a(href = "https://github.com/dar4datascience/shiny-salesman",
                    class = "nav-link",
                    tags$i(class = "fab fa-github")
             )
