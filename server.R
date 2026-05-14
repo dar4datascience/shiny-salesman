@@ -3,7 +3,7 @@ library(maps)
 library(geosphere)
 source("helpers.R")
 
-shinyServer(function(input, output, session) {
+function(input, output, session) {
   #bs_themer()
   vals = reactiveValues()
 
@@ -196,4 +196,4 @@ shinyServer(function(input, output, session) {
     run_annealing_process$suspend()
     set_cities_randomly$suspend()
   })
-})
+}
