@@ -29,18 +29,17 @@ def screenshot(page, name, frames):
     frames.append(Image.open(path))
 
 
-def click_shadow_button(page, host_selector, button_selector, timeout=5000):
+def click_shadow_button(page, host_selector, button_selector):
     """Click a button inside an open shadow DOM."""
     page.evaluate(
-        f"""
-        ({{
-            host: '{host_selector}',
-            btn: '{button_selector}'
-        }}) => {{
-            const el = document.querySelector(host)?.shadowRoot?.querySelector(btn);
+        """([host, btn]) => {
+            const root = document.querySelector(host);
+            if (!root) return;
+            const shadow = root.shadowRoot || root;
+            const el = shadow.querySelector(btn);
             if (el) el.click();
-        }}
-        """
+        }""",
+        [host_selector, button_selector],
     )
 
 
