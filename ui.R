@@ -49,7 +49,7 @@ page_sidebar(
         hideSelected = TRUE
       )
     ),
-    actionButton("set_random_cities", "Set Randomly", icon = bs_icon("shuffle")),
+    actionButton("set_random_cities", "Set Randomly", icon = icon("random")),
     hr(),
     h5("Simulated Annealing Parameters"),
     numericInput("s_curve_amplitude", "S-curve Amplitude", 4000, min = 0, max = 10000000),
@@ -59,7 +59,7 @@ page_sidebar(
     numericInput("plot_every_iterations", "Draw Every N Iterations", 1000, min = 1, max = 1000000),
     hr(),
     actionButton("go_button", "SOLVE", class = "btn-info btn-lg w-100"),
-    actionButton("set_random_cities_2", "Set Cities Randomly", icon = bs_icon("arrow-repeat"), class = "btn-secondary w-100 mt-2"),
+    actionButton("set_random_cities_2", "Set Cities Randomly", icon = icon("refresh"), class = "btn-secondary w-100 mt-2"),
     tags$div(
       class = "mt-3 text-center",
       tags$a(
