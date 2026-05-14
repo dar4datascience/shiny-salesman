@@ -3,3 +3,6 @@ shinyapps
 .Rproj.user
 .Rhistory
 renv/
+.venv/
+scripts/frames/
+site/

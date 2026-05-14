@@ -6,6 +6,12 @@ source("helpers.R")
 shinyServer(function(input, output, session) {
   #bs_themer()
   vals = reactiveValues()
+
+  observe({
+    session$setCurrentTheme(
+      bs_theme_update(ui_theme, bg = if (isTRUE(input$dark_mode)) "#1a1a1a" else "#008080")
+    )
+  }) |> bindEvent(input$dark_mode)
   
   map_name = reactive({
     tolower(input$map_name)
